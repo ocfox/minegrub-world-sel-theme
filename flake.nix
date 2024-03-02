@@ -53,6 +53,13 @@
               {
                 theme = "${minegrub-world-sel-theme}/grub/themes/minegrub-world-sel-theme";
                 splashImage = "${minegrub-world-sel-theme}/grub/themes/minegrub-world-sel-theme/background.png";
+                gfxmodeEfi = "1920x1080,auto";
+                gfxmodeBios = "1920x1080,auto";
+                extraConfig = ''
+                  insmod gfxterm
+                  insmod png
+                  set icondir=($root)/theme/icons
+                '';
               };
           };
         };
